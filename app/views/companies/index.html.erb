@@ -1,33 +1,95 @@
-<h1>Companies</h1>
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="page-title">
+      <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Companies</span></h4>
+    </div>
+  </div>
+  <div class="breadcrumb-line breadcrumb-line-component">
+    <ul class="breadcrumb">
+      <li><a href="<%= root_path %>"><i class="icon-home2 position-left"></i> Dashboard</a></li>
+      <li class="active">Companies</li>
+    </ul>
+  </div>
+</div>
+<div class="content">
+  <div class="panel panel-flat">
+    <div class="panel-heading">
+      <h5 class="panel-title">Companies datatable</h5>
+    </div>
+    <table class="table datatable-basic">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Contact name</th>
+          <th>Contact number</th>
+          <th>Alternate number</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>      
+      <tbody>
+        <% @companies.each do |company| %>
+          <tr>
+            <td><%= company.name %></td>
+            <td><%= company.location %></td>
+            <td><%= company.contact_name %></td>
+            <td><%= company.contact_number %></td>
+            <td><%= company.alternate_number %></td>
+            <td class="text-center">
+              <ul class="icons-list">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-menu9"></i>
+                  </a>
+
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="<%= company_path(company) %>"><i class="icon-eye"></i> Show</a></li>
+                    <li><a href="<%= edit_company_path(company) %>"><i class="icon-pencil"></i> Edit</a></li>
+                    <li><a href="<%= company_path(company) %>" data-method="delete" data-confirm="Are you sure?"><i class="icon-trash"></i> Delete</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Company', new_company_path, class: "btn" %> 
+  </div>
+
+
+<!-- <h1>Companies</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Contact name</th>
-      <th>Contact number</th>
-      <th>Alternate number</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Contact name</th>
+<th>Contact number</th>
+<th>Alternate number</th>
+<th colspan="3"></th>
+</tr>
+</thead>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.location %></td>
-        <td><%= company.contact_name %></td>
-        <td><%= company.contact_number %></td>
-        <td><%= company.alternate_number %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<tbody>
+<%# @companies.each do |company| %>
+<tr>
+<td><%#= company.name %></td>
+<td><%#= company.location %></td>
+<td><%#= company.contact_name %></td>
+<td><%#= company.contact_number %></td>
+<td><%#= company.alternate_number %></td>
+<td><%#= link_to 'Show', company %></td>
+<td><%#= link_to 'Edit', edit_company_path(company) %></td>
+<td><%#= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<%# end %>
+</tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+<%#= link_to 'New Company', new_company_path %>
+-->

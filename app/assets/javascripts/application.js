@@ -28,3 +28,6 @@
 //= require nicescroll.min
 //= require app
 //= require dashboard
+//= require datatables.min
+//= require select2.min
+//= require datatables_basic

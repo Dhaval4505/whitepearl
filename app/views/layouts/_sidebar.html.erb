@@ -35,7 +35,7 @@
 					<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
 					<li class="active"><a href="<%= root_path %>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
 					<% if current_user.is_admin? %>
-						<li><a href="#"><i class="fa fa-building-o"></i> <span>Companies</span></a></li>
+						<li><a href="<%= companies_path %>"><i class="fa fa-building-o"></i> <span>Companies</span></a></li>
 						<li><a href="#"><i class="fa fa-suitcase"></i> <span>Jobs</span></a></li>
 						<li><a href="#"><i class="fa fa-users"></i> <span>Users</span></a></li>
 					<% end %>
