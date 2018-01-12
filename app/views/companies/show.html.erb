@@ -1,0 +1,27 @@
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @company.location %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @company.contact_name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @company.contact_number %>
+</p>
+
+<p>
+  <strong>Alternate number:</strong>
+  <%= @company.alternate_number %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

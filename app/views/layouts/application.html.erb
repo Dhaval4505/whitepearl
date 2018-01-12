@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WhitePearl</title>
+	<%= csrf_meta_tags %>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= javascript_include_tag 'application' %>
+</head>
+
+<body>
+	<%= render 'layouts/header' %>
+	<div class="page-container" style="padding: 0 !important;">
+		<div class="page-content">
+			<%= render 'layouts/sidebar' %>
+			<div class="content-wrapper">
+				<div class="content">
+					<p id="notice"><%= notice %></p>
+					<%= yield %>
+					<div class="footer text-muted">
+						&copy; 2018. <a href="#">White Pearl Consulting</a> Powered by <a href="http://themeforest.net/user/Kopyov" target="_blank">iAppStack Solutions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: postgres
+  password: parin
+  database: white_pearl_development
