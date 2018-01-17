@@ -33,13 +33,13 @@
 
 					<!-- Main -->
 					<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-					<li class="active"><a href="<%= root_path %>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+					<li class="<%= current_path(root_path) %>"><a href="<%= root_path %>"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
 					<% if current_user.is_admin? %>
-						<li><a href="<%= companies_path %>"><i class="fa fa-building-o"></i> <span>Companies</span></a></li>
-						<li><a href="#"><i class="fa fa-suitcase"></i> <span>Jobs</span></a></li>
+						<li class="<%= current_path(companies_path) %>"><a href="<%= companies_path %>"><i class="fa fa-building-o"></i> <span>Companies</span></a></li>
+						<li class="<%= current_path(jobs_path) %>"><a href="<%= jobs_path %>"><i class="fa fa-suitcase"></i> <span>Jobs</span></a></li>
 						<li><a href="#"><i class="fa fa-users"></i> <span>Users</span></a></li>
 					<% end %>
-					<li><a href="#"><i class="fa fa-users"></i> <span>Candidates</span></a></li>
+					<li  class="<%= current_path(candidates_path) %>"><a href="<%= candidates_path %>"><i class="fa fa-users"></i> <span>Candidates</span></a></li>
 					<li><a href="#"><i class="fa fa-share-alt"></i> <span>Profile Shared to WPC</span></a></li>
 					<li><a href="#"><i class="fa fa-share-alt-square"></i> <span>Profile Shared to Clients</span></a></li>
 					<li><a href="#"><i class="fa fa-trash-o"></i> <span>Rejected Profile</span></a></li>

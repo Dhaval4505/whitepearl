@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :candidates
+  resources :jobs
   resources :companies
 	root 'dashboard#index'
   

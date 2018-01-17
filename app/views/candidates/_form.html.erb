@@ -1,0 +1,112 @@
+<%= form_with(model: candidate, local: true) do |form| %>
+  <% if candidate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(candidate.errors.count, "error") %> prohibited this candidate from being saved:</h2>
+
+      <ul>
+      <% candidate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :entry_date %>
+    <%= form.date_select :entry_date, id: :candidate_entry_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :candidate_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :candidate_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_number %>
+    <%= form.text_field :contact_number, id: :candidate_contact_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :candidate_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_id %>
+    <%= form.text_field :job_id, id: :candidate_job_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id, id: :candidate_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :candidate_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qualification %>
+    <%= form.text_field :qualification, id: :candidate_qualification %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experiance %>
+    <%= form.text_field :experiance, id: :candidate_experiance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_company %>
+    <%= form.text_field :current_company, id: :candidate_current_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_designation %>
+    <%= form.text_field :current_designation, id: :candidate_current_designation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_location %>
+    <%= form.text_field :current_location, id: :candidate_current_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :open_for_location %>
+    <%= form.text_field :open_for_location, id: :candidate_open_for_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_ctc %>
+    <%= form.text_field :current_ctc, id: :candidate_current_ctc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expected_ctc %>
+    <%= form.text_field :expected_ctc, id: :candidate_expected_ctc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notice_period %>
+    <%= form.text_field :notice_period, id: :candidate_notice_period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason_for_change %>
+    <%= form.text_field :reason_for_change, id: :candidate_reason_for_change %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :candidate_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
